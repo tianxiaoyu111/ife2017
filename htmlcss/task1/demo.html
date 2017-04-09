@@ -108,28 +108,31 @@
     <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
     <h2>侧栏注册窗口标题</h2>
     <form action="#" method="post">
-        <p>请输入邮箱地址：<input type="text" name="email" value="这是一个文本输入框"></p>
+        <p><label>请输入邮箱地址：<input type="text" name="email" placeholder="这是一个文本输入框"></label></p>
         <p>邮箱地址请按要求格式输入</p>
         <p>
-            请输入密码：<input type="text" name="pwd" value="这是一个文本输入框">
-            请重复输入密码：<input type="text" name="pwd_again" value="这是一个文本输入框">
+            <label>请输入密码：<input type="password" name="pwd" placeholder="这是一个密码输入框"></label>
+            <label>请重复输入密码：<input type="password" name="pwd_again" placeholder="这是一个密码输入框"></label>
         </p>
         <p>密码请为6-16位英文数字</p>
         <p>
             性别：
-            <input type="radio" name="sex" value="male">男<input type="radio" name="sex" value="female" checked>女
-            城市：
-            <select name="city">
-                <option value="beijing">北京</option>
-                <option value="shanghai" selected>上海</option>
-                <option value="guangzhou">广州</option>
-            </select>
+            <input type="radio" id="male" name="sex" value="male"><label for="male">男</label>
+            <input type="radio" id="female" name="sex" value="female" checked><label for="female">女</label>
+            <label>
+                城市：
+                <select name="city">
+                    <option value="beijing">北京</option>
+                    <option value="shanghai" selected>上海</option>
+                    <option value="guangzhou">广州</option>
+                </select>
+            </label>
             爱好：
             <input type="checkbox" name="hobby[]" value="sport">运动
             <input type="checkbox" name="hobby[]" value="art" checked>艺术
             <input type="checkbox" name="hobby[]" value="science">科学
             个人描述：
-            <textarea name="content">这是一个多行输入框，输入您的个人描述</textarea>
+            <textarea name="content" placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
             <input type="submit" value="确认提交">
         </p>
     </form>
