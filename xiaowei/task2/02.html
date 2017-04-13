@@ -15,6 +15,10 @@
             font-size: 15px;
             line-height: 1.7em;
         }
+        /*段落外边距*/
+        h2, h3, .author, p, ul, ol {
+            margin: 10px 0;
+        }
 
 
         /*头部*/
@@ -54,23 +58,19 @@
         section#main{
             /**/
         }
-        /*段落外边距*/
-        h2, h3, .author, p {
-            margin: 10px 0;
-        }
         /*段落缩进*/
         article p {
             text-indent: 2em;
         }
         /*列表缩进*/
-        ul, ol{
-            padding: 10px 0 10px 40px;
+        article ul, article ol{
+            padding: 0 0 0 40px;
         }
         /*三行标题的字体大小和颜色*/
-        h2 {
+        article h2 {
             font-size: 135%;
         }
-        h3 {
+        article h3 {
             font-size: 105%;
             color: #666;
         }
@@ -92,7 +92,28 @@
             width: 80%;
             padding: 5px 0;
         }
-
+        /*列表*/
+        article table {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            font-size: 80%;
+        }
+        article table th, td {
+            border: 1px solid #ddd;
+            padding: 0 5px;
+        }
+        article table th {
+            text-align: left;
+            background: #000;
+            color: #fff;
+            font-size: 105%;  /*80%的105%*/
+        }
+        article table tr:last-child {     /*这个tr是某个元素的小儿子*/
+            background: #ddd;
+            font-size: 105%;
+            font-weight: bold;
+        }
 
         /*脚部*/
         footer {
@@ -102,9 +123,6 @@
             text-align: center;
             padding: 15px 0 25px 0;
         }
-
-
-
     </style>
 </head>
 <body>
@@ -177,9 +195,9 @@
         下面是一个表格
         <table>
             <tr>
-                <td>表头</td>
-                <td>表头</td>
-                <td>表头</td>
+                <th>表头</th>
+                <th>表头</th>
+                <th>表头</th>
             </tr>
             <tr>
                 <td>表内容单元格</td>
@@ -210,8 +228,7 @@
 </section>
 
     <aside>
-        <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
-        <h3>侧栏注册窗口标题</h3>
+        <h3>这里以后是一个侧栏，这是侧栏的标题</h3>
         <form action="#" method="post">
             <p><label>请输入邮箱地址：<input type="text" name="email" placeholder="这是一个文本输入框"></label></p>
             <p>邮箱地址请按要求格式输入</p>
