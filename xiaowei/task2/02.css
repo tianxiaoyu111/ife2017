@@ -150,6 +150,7 @@ aside input.submit {
     border-radius: 10px;
     font-size: 110%;
     font-weight: bold;
+    cursor: pointer;
 }
 
 
