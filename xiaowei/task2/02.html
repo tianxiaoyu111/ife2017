@@ -3,171 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <style>
-        /*reset*/
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background: #ddd;
-            margin: 0;
-            font-size: 15px;
-            line-height: 1.7em;
-        }
-        /*段落外边距*/
-        h2, h3, .author, p, ul, ol {
-            margin: 10px 0;
-        }
-
-
-        /*头部*/
-        header {
-            background: #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-        header a.img {
-            padding: 10px 0;
-        }
-        nav ul {
-            display: flex;
-        }
-        nav ul li {
-            margin-left: 25px;
-        }
-        nav ul li a {
-            font-size: 90%;
-            text-decoration: none;
-            color: #fff;
-        }
-        nav ul li a:hover {
-            color: #aaa;
-        }
-
-
-        /*主体部分*/
-        article, section#img, aside{
-            background: #fff;
-            margin: 20px;
-            padding: 25px 20px;
-            box-shadow: 2px 2px 2px #888;
-        }
-        section#main{
-            /**/
-        }
-        /*段落缩进*/
-        article p {
-            text-indent: 2em;
-        }
-        /*列表缩进*/
-        article ul, article ol{
-            padding: 0 0 0 40px;
-        }
-        /*三行标题的字体大小和颜色*/
-        article h2 {
-            font-size: 135%;
-        }
-        article h3 {
-            font-size: 105%;
-            color: #666;
-        }
-        .author {
-            font-size: 90%;
-            color: #666;
-            text-indent: 0;
-        }
-        /*小图片框*/
-        section#img figure {
-            width: 150px;
-            border: 1px solid #ddd;
-            text-align: center;
-            margin: 25px;
-            font-size: 90%;
-            padding: 5px 0 0 0;
-        }
-        section#img figure img {
-            width: 80%;
-            padding: 5px 0;
-        }
-        /*列表*/
-        article table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 90%;
-        }
-        article table th, td {
-            border: 1px solid #ddd;
-            padding: 2px 5px;
-        }
-        article table th {
-            text-align: left;
-            background: #000;
-            color: #fff;
-            font-size: 105%;  /*90%的105%*/
-        }
-        article table tr:last-child {     /*这个tr是某个元素的小儿子*/
-            background: #ddd;
-            font-size: 105%;
-            font-weight: bold;
-        }
-        /*表单*/
-        aside h3 {
-            font-size: 110%;
-            border-left: 4px solid #ddd;
-            padding: 10px;
-        }
-        aside div.form-table {
-            display: table;
-            width: 100%;
-        }
-        aside form .tableRow {
-            display: table-row;
-        }
-        .tableRow > p, .tableRow > label {
-            display: table-cell;
-            padding: 3px 5px;
-            font-size: 90%;
-        }
-        aside .tableRow > label:first-child {
-            text-align: right;
-            vertical-align: top;
-        }
-        aside input {
-            font-size: 90%;
-            padding: 2px;
-        }
-        aside .tips {
-            padding: 0 0 15px 7px;
-            font-size: 80%;
-            color: #555;
-        }
-        aside textarea {
-            width: 90%;
-            height: 100px;
-        }
-        aside input.submit {
-            width: 100%;
-            background: #0033dd;
-            padding: 10px 0;
-            color: #fff;
-            border-radius: 10px;
-            font-size: 110%;
-            font-weight: bold;
-        }
-
-
-        /*脚部*/
-        footer {
-            background: #333;
-            font-size: 80%;
-            color: #fff;
-            text-align: center;
-            padding: 15px 0 25px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/02.css">
 </head>
 <body>
 <header>
@@ -289,63 +125,63 @@
     </article>
 </section>
 
-    <aside>
-        <h3>这里以后是一个侧栏，这是侧栏的标题</h3>
-        <form action="#" method="post">
-            <div class="form-table">
-                <div class="tableRow">
-                    <label for="email">请输入邮箱地址：</label>
-                    <p><input type="text" id="email" name="email" placeholder="这是一个文本输入框"></p>
-                </div>
-                <div class="tableRow">
-                    <label></label>
-                    <p class="tips">邮箱地址请按要求格式输入</p>
-                </div>
-                <div class="tableRow">
-                    <label for="pwd">请输入密码：</label>
-                    <p><input type="password" id="pwd" name="pwd" placeholder="这是一个密码输入框"></p>
-                </div>
-                <div class="tableRow">
-                    <label for="pwd_again">请重复输入密码：</label>
-                    <p><input type="password" id="pwd_again" name="pwd_again" placeholder="这是一个密码输入框"></p>
-                </div>
-                <div class="tableRow">
-                    <label></label>
-                    <p class="tips">密码请为6-16位英文数字</p>
-                </div>
-                <div class="tableRow">
-                    <label>性别：</label>
-                    <P>
-                        <input type="radio" id="male" name="gender" value="male" checked><label for="male">男</label>
-                        <input type="radio" id="female" name="gender" value="female"><label for="female">女</label>
-                    </P>
-                </div>
-                <div class="tableRow">
-                    <label for="city">城市：</label>
-                    <p>
-                        <select id="city" name="city">
-                            <option value="beijing">北京</option>
-                            <option value="shanghai" selected>襄阳</option>
-                            <option value="guangzhou">上海</option>
-                        </select>
-                    </p>
-                </div>
-                <div class="tableRow">
-                    <label>爱好：</label>
-                    <p>
-                        <input type="checkbox" id="sport" name="hobby[]" value="sport"><label for="sport">运动</label>
-                        <input type="checkbox" id="art" name="hobby[]" value="art" checked><label for="art">艺术</label>
-                        <input type="checkbox" id="science" name="hobby[]" value="science"><label for="science">科学</label>
-                    </p>
-                </div>
-                <div class="tableRow">
-                    <label for="content">个人描述：</label>
-                    <p><textarea id="content" name="content" placeholder="这是一个多行输入框，输入您的个人描述"></textarea></p>
-                </div>
+<aside>
+    <h3>这里以后是一个侧栏，这是侧栏的标题</h3>
+    <form action="#" method="post">
+        <div class="form-table">
+            <div class="tableRow">
+                <label for="email">请输入邮箱地址：</label>
+                <p><input type="text" id="email" name="email" placeholder="这是一个文本输入框"></p>
             </div>
-            <input class="submit" type="submit" value="确认提交">
-        </form>
-    </aside>
+            <div class="tableRow">
+                <label></label>
+                <p class="tips">邮箱地址请按要求格式输入</p>
+            </div>
+            <div class="tableRow">
+                <label for="pwd">请输入密码：</label>
+                <p><input type="password" id="pwd" name="pwd" placeholder="这是一个密码输入框"></p>
+            </div>
+            <div class="tableRow">
+                <label for="pwd_again">请重复输入密码：</label>
+                <p><input type="password" id="pwd_again" name="pwd_again" placeholder="这是一个密码输入框"></p>
+            </div>
+            <div class="tableRow">
+                <label></label>
+                <p class="tips">密码请为6-16位英文数字</p>
+            </div>
+            <div class="tableRow">
+                <label>性别：</label>
+                <P>
+                    <input type="radio" id="male" name="gender" value="male" checked><label for="male">男</label>
+                    <input type="radio" id="female" name="gender" value="female"><label for="female">女</label>
+                </P>
+            </div>
+            <div class="tableRow">
+                <label for="city">城市：</label>
+                <p>
+                    <select id="city" name="city">
+                        <option value="beijing">北京</option>
+                        <option value="shanghai" selected>襄阳</option>
+                        <option value="guangzhou">上海</option>
+                    </select>
+                </p>
+            </div>
+            <div class="tableRow">
+                <label>爱好：</label>
+                <p>
+                    <input type="checkbox" id="sport" name="hobby[]" value="sport"><label for="sport">运动</label>
+                    <input type="checkbox" id="art" name="hobby[]" value="art" checked><label for="art">艺术</label>
+                    <input type="checkbox" id="science" name="hobby[]" value="science"><label for="science">科学</label>
+                </p>
+            </div>
+            <div class="tableRow">
+                <label for="content">个人描述：</label>
+                <p><textarea id="content" name="content" placeholder="这是一个多行输入框，输入您的个人描述"></textarea></p>
+            </div>
+        </div>
+        <input class="submit" type="submit" value="确认提交">
+    </form>
+</aside>
 <footer>
     版权所有&copy;
 </footer>
