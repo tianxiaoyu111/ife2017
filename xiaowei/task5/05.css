@@ -89,17 +89,20 @@ article h3 {
     text-indent: 0;
 }
 /*小图片框*/
+section#img {
+    overflow: hidden;
+}
 section#img figure {
     width: 150px;
     border: 1px solid #ddd;
     text-align: center;
     margin: 25px;
     font-size: 90%;
-    padding: 5px 0 0 0;
+    padding: 5px 15px;
+    float: left;
 }
 section#img figure img {
-    width: 80%;
-    padding: 5px 0;
+    width: 100%;
 }
 /*列表*/
 article table {
